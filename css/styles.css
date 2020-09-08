@@ -649,27 +649,27 @@ h3 {
 .portfolio-description {
   position: absolute;
   top: 0;
-
-  padding: 63px 24px;
-  margin: 0;
-  /* margin-bottom: -24px; */
-
+  left: 0;
   width: 100%;
-  height: 100%;
+  padding: 63px 24px;
 
+  background-color: var(--accent-color);
+
+  opacity: 0;
+}
+
+.portfolio-description p {
+  height: 170px;
+  margin: 0;
   font-style: normal;
 
   font-size: 18px;
   line-height: 1.56;
 
   color: var(--contrast-white-color);
-  background-color: var(--accent-color);
-
   overflow: hidden;
 }
-.portfolio-thumb {
-  opacity: 0;
-}
-.portfolio-thumb:hover {
+
+.portfolio-thumb:hover .portfolio-description {
   opacity: 1;
 }
