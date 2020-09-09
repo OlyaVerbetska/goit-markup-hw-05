@@ -95,6 +95,7 @@ h3 {
   display: inline-block;
   padding: 32px 0;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts {
   margin-left: auto;
@@ -104,13 +105,15 @@ h3 {
 .contacts .link {
   color: var(--text-color);
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .post-icon,
 .tel-icon {
-  --color2: var(--text-color);
-  /* --color2: var(--text-color); */
+  fill: var(--text-color);
+
   display: inline-block;
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .item:not(:last-child),
@@ -146,12 +149,12 @@ h3 {
 
 .contacts .link:hover .post-icon,
 .contacts .link:focus .post-icon {
-  --color2: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contacts .link:hover .tel-icon,
 .contacts .link:focus .tel-icon {
-  --color2: #2196f3;
+  fill: var(--accent-color);
 }
 
 /* hero */
@@ -383,12 +386,14 @@ h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-icon-team {
-  --color1: var(--border-clients);
+  fill: var(--border-clients);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-icon-company {
-  --color1: var(--contrast-white-color);
+  fill: var(--contrast-white-color);
 }
 .socials-item .link:hover,
 .socials-item .link:focus,
@@ -399,11 +404,12 @@ h3 {
 
 .socials-item .link:hover .socials-icon-team,
 .socials-item .link:focus .socials-icon-team {
-  --color1: var(--contrast-white-color);
+  fill: var(--contrast-white-color);
 }
 
 .footer .socials-item .link {
   background-color: var(--bg-color-icon);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Клиенты */
@@ -432,10 +438,12 @@ h3 {
 
   width: 170px;
   height: 90px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
-  --color1: var(--border-clients);
+  fill: var(--border-clients);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -443,7 +451,7 @@ h3 {
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-  --color1: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Футер */
@@ -485,6 +493,8 @@ h3 {
   line-height: 1.71;
 
   color: var(--contrast-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:not(:last-child) {
@@ -644,18 +654,21 @@ h3 {
 
 .portfolio-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-description {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   padding: 63px 24px;
 
   background-color: var(--accent-color);
 
-  opacity: 0;
+  /* opacity: 0; */
+  transform: translateY(200%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-description p {
@@ -671,5 +684,6 @@ h3 {
 }
 
 .portfolio-thumb:hover .portfolio-description {
-  opacity: 1;
+  /* opacity: 1; */
+  transform: translateY(0);
 }
