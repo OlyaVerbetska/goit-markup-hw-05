@@ -683,7 +683,7 @@ h3 {
   overflow: hidden;
 }
 
-.portfolio-thumb:hover .portfolio-description {
+.portfolio .list .item:hover .portfolio-description {
   /* opacity: 1; */
   transform: translateY(0);
 }
