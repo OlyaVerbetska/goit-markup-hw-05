@@ -13,6 +13,8 @@
   --header-border: #ececec;
   --border-clients: #afb1b8;
   --bg-color-icon: rgba(255, 255, 255, 0.1);
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* Sprite */
 }
 body {
@@ -59,7 +61,9 @@ h3 {
 }
 /* header links */
 .link {
+  /* не надо было задавать) */
   font-weight: 500;
+
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -95,7 +99,7 @@ h3 {
   display: inline-block;
   padding: 32px 0;
   color: var(--title-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .contacts {
   margin-left: auto;
@@ -105,7 +109,7 @@ h3 {
 .contacts .link {
   color: var(--text-color);
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .post-icon,
 .tel-icon {
@@ -113,7 +117,7 @@ h3 {
 
   display: inline-block;
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .site-nav .item:not(:last-child),
@@ -386,11 +390,11 @@ h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 .socials-icon-team {
   fill: var(--border-clients);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .socials-icon-company {
   fill: var(--contrast-white-color);
@@ -409,7 +413,7 @@ h3 {
 
 .footer .socials-item .link {
   background-color: var(--bg-color-icon);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 /* Клиенты */
@@ -438,12 +442,12 @@ h3 {
 
   width: 170px;
   height: 90px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-duration) var(--transition-timing-function);
 }
 
 .clients-icon {
   fill: var(--border-clients);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -490,11 +494,12 @@ h3 {
 
 .footer .link {
   font-style: normal;
+  font-weight: 400;
   line-height: 1.71;
 
   color: var(--contrast-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer .link:not(:last-child) {
@@ -588,6 +593,10 @@ h3 {
 
   background-color: var(--bg-color-light);
   border-radius: 4px;
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-filter-item:hover,
@@ -668,7 +677,7 @@ h3 {
 
   /* opacity: 0; */
   transform: translateY(200%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-description p {
